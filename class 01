@@ -1,0 +1,23 @@
+insert into pessoas values
+(default,'José', '2019-02-10', 'M', '20.0', '1.55', 'Brasil'),
+(default, 'Benjamin', '2005-06-23', 'M', '55.5', '1.60', default),
+(default, 'Emma', '1997-11-09', 'F', '50.0', '1.62', default);
+
+select * from pessoas;
+
+desc pessoas;
+
+alter table pessoas
+rename to people;
+
+alter table pessoas
+modify column profissao varchar(20);
+
+alter table pessoas
+drop column profissao;
+
+alter table pessoas
+add column profissao varchar(10) after nome;
+
+alter table pessoas
+add column codigo int first;
